@@ -26,7 +26,7 @@ export default function App() {
             </div>
           </div>
 
-          <nav className="hidden md:flex items-center gap-10 text-[15px] font-medium text-white/90">
+          <nav className="hidden lg:flex items-center gap-10 text-[15px] font-medium text-white/90">
             <a href="#" className="hover:text-[#ff6b2b] transition-colors">Destinations</a>
             <a href="#" className="hover:text-[#ff6b2b] transition-colors">Experiences</a>
             <a href="#" className="hover:text-[#ff6b2b] transition-colors">Packages</a>
@@ -89,7 +89,7 @@ export default function App() {
             <motion.div 
               animate={{ y: [0, -8, 0], x: [0, 4, 0] }} 
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute left-[-20px] top-[60%] -translate-y-1/2 flex items-center z-20"
+              className="absolute left-0 sm:left-[-20px] top-[60%] -translate-y-1/2 flex items-center z-20"
             >
               <div className="bg-[#ff6b2b] text-black px-4 py-1.5 rounded-full text-[13px] font-medium shadow-lg">Agency</div>
               <svg width="18" height="24" viewBox="0 0 17 24" fill="none" className="drop-shadow-md -ml-2 mt-3 -rotate-12">
@@ -100,7 +100,7 @@ export default function App() {
             <motion.div 
               animate={{ y: [0, 6, 0], x: [0, -3, 0] }} 
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute right-[-20px] top-[15%] flex items-center z-20"
+              className="absolute right-0 sm:right-[-20px] top-[15%] flex items-center z-20"
             >
               <svg width="18" height="24" viewBox="0 0 17 24" fill="none" className="drop-shadow-md -mr-1 mt-2 rotate-[150deg]">
                 <path d="M1.38541 1.70119L15.3995 13.518C16.4862 14.4339 15.9388 16.2086 14.5028 16.4526L9.62001 17.2831L6.71181 22.8468C6.1557 23.9103 4.54415 23.7535 4.2185 22.6105L1.38541 1.70119Z" fill="white" stroke="#333" strokeWidth="1.5" strokeLinejoin="round"/>
