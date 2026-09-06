@@ -77,13 +77,6 @@ export default function App() {
         {/* Top fade to remove any mismatch clipping line with the hero banner */}
         <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-[#050505] to-transparent pointer-events-none z-0"></div>
 
-        {/* Sunset horizon gradient at the bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-[600px] bg-gradient-to-b from-transparent via-[#ff6b2b]/10 to-[#ff6b2b]/40 pointer-events-none z-0"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ffbba5]/40 to-transparent pointer-events-none z-0"></div>
-
-        {/* Subtle radial gradient background */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-gradient-to-br from-[#ff6b2b]/10 to-transparent blur-[120px] pointer-events-none rounded-full z-0"></div>
-        
         <div className="flex flex-col items-center justify-center px-4 w-full text-center relative z-10">
           <div className="relative border border-white/[0.08] p-16 md:p-24 rounded-sm border-dashed">
             {/* Corner Markers */}
@@ -395,9 +388,6 @@ function Word({ word, progress, range }: { word: string, progress: any, range: [
 function ServiceCard({ number, title, tags }: { number: string, title: string, tags: string[] }) {
   return (
     <div className="relative flex flex-col p-8 rounded-[32px] bg-[#111111] border border-white/5 overflow-hidden group min-h-[420px]">
-      {/* Orange glow at bottom */}
-      <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-64 h-64 bg-[#ff6b2b] rounded-full blur-[100px] opacity-10 group-hover:opacity-25 transition-opacity duration-500 pointer-events-none"></div>
-      
       <div className="relative z-10 flex-1 flex flex-col h-full">
         <span className="text-white/30 text-[13px] font-medium mb-8">{number}</span>
         
