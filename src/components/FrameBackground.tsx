@@ -4,21 +4,17 @@ const FRAME_COUNT = 300;
 const frameSrc = (i: number) =>
   `/frames/ezgif-frame-${String(i + 1).padStart(3, '0')}.jpg`;
 
-export default function ScrollHero() {
-  const wrapperRef = useRef<HTMLDivElement>(null);
+export default function FrameBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current!;
-    const wrapper = wrapperRef.current!;
     const ctx = canvas.getContext('2d')!;
     const images: HTMLImageElement[] = new Array(FRAME_COUNT);
 
     function progress() {
-      const rect = wrapper.getBoundingClientRect();
-      const scrollable = rect.height - window.innerHeight;
-      if (scrollable <= 0) return 0;
-      return Math.min(1, Math.max(0, -rect.top / scrollable));
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      return scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
     }
 
     function draw() {
@@ -77,9 +73,5 @@ export default function ScrollHero() {
     };
   }, []);
 
-  return (
-    <div ref={wrapperRef} className="relative h-[500vh] w-full bg-[#050505]">
-      <canvas ref={canvasRef} className="sticky top-0 block h-screen w-full" />
-    </div>
-  );
+  return <canvas ref={canvasRef} className="fixed inset-0 -z-10 block h-screen w-full" />;
 }

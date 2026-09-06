@@ -6,14 +6,14 @@
 import { Map, Search, ArrowRight, Plus, Quote, Play, Crown, Headset, MapPin, ShieldCheck } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
-import ScrollHero from './components/ScrollHero';
+import FrameBackground from './components/FrameBackground';
 
 export default function App() {
   return (
-    <div className="w-full bg-[#050505] min-h-screen text-white font-sans selection:bg-[#ff6b2b]/30">
+    <div className="w-full min-h-screen text-white font-sans selection:bg-[#ff6b2b]/30">
 
-      {/* 0. SCROLL-SCRUBBED FLIGHT ANIMATION */}
-      <ScrollHero />
+      {/* Frame-scrubbed flight animation, fixed behind every section */}
+      <FrameBackground />
 
       {/* 1. ORIGINAL HERO BANNER */}
       <div className="h-[900px] flex flex-col items-center w-full relative z-20">
@@ -150,7 +150,7 @@ export default function App() {
       </section>
 
       {/* 3. About Section with Scroll Reveal Text */}
-      <section className="w-full px-6 py-24 flex flex-col items-center text-center bg-[#050505] relative z-20">
+      <section className="w-full px-6 py-24 flex flex-col items-center text-center relative z-20">
         <div className="w-full max-w-[1200px] mx-auto flex flex-col items-center">
           <span className="text-white/50 text-[15px] font-medium mb-12 tracking-wider">ABOUT Riḥlah</span>
           
